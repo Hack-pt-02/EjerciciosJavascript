@@ -104,8 +104,9 @@ String()
 
 */
 
-let number = 35;
+let number = 18.30;
 
-toString (number);
+number.toString ([4])
 
-console.log (number);
+console.log(number.toString)
+
