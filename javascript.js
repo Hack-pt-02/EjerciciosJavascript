@@ -77,3 +77,35 @@ const variableuno = "soy la primera variable, y me sumo a ..."
 const variabledos = "la segunda variable!"
 
 console.log ( variableuno + variabledos)
+
+// Comparación de datos en javascript
+
+let a = "5";
+let b = "10";
+
+a = b ? console.log("iguales"): console.log("diferentes");
+
+// En este ejemplo aparece Equal, voy a probar otra.
+
+a==b ? console.log("iguales"): console.log("diferentes");
+
+// Aquí aparece diferentes, voy a probar la última.
+
+a===b ? console.log("iguales"): console.log("diferentes");
+
+// también aparece diferentes.
+
+// Creo que lo anterior es un if-else, pero abreviado con el ? y los :
+
+/* Ejercicio 9, Inicializar una variable num de valor 5 y transforma num en cadena. Imprime en console.log los dos tipos de datos.
+
+.toString()
+String()
+
+*/
+
+let number = 35;
+
+toString (number);
+
+console.log (number);
