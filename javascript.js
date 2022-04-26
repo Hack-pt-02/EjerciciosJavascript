@@ -110,3 +110,25 @@ number.toString ([4])
 
 console.log(number.toString)
 
+let pruebas = {
+    nombres : "propios",
+    edades : 15,
+}
+
+console.log (`tu calle en ${pruebas.nombres} es ${pruebas.edades+3}`)
+
+let enpantalla = "prueba en pantalla"
+
+document.write(enpantalla)
+
+
+let parametros = {
+    tamaño : "x o L",
+    peso : 20,
+}
+
+document.write (`los datos son ${parametros.tamaño} y ${parametros.peso}`)
+
+let pagina = "TU MUNDO";
+
+document.write (pagina);
