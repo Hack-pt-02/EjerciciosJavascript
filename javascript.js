@@ -134,9 +134,7 @@ console.log (segundacoercion); // La resta, por el contrario, nos realiza la ope
 
 // Ejercicio 14
 
-let var1 = "contigo"
+let var1 = "Hey Tú, cómo te llamas. ¡Hey, estoy hablando contigo!";
 
-var1 = "yo";
-// simplemente cambiando esta preciosa variable podemos cambiar el contenido del texto, sin cambiar de cadena ni imprimir una nueva cadena.
-
-console.log (`Hey Tú, cómo te llamas. ¡Hey, estoy hablando ${var1}!`)
+console.log (var1);
+console.log (var1.replace("contigo", "yo"));
