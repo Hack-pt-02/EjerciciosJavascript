@@ -1,134 +1,142 @@
-let comenzar = "¡Empezamos con javascript!"
+// Ejercicio 2
 
-console.log (comenzar);
+let welcome = "¡Empezemos con javascript!"
 
-let saludo;
+console.log (welcome);
 
-const exit = "se acaba aquí"
+// Ejercicio 3
 
-console.log (exit);
+let estudiante = "Hola, soy un estudiante Hackademy."
 
-saludo = "Hola";
+console.log (estudiante)
 
-saludo = "el otro";
+// Ejercicio 4
 
-saludo = " el otro más";
+let animales = "perro"
 
-console.log (saludo);
+animales = "gato"
 
-// dos variables que al imprimirlas formen una frase
+console.log (animales);
 
-let uno = "Buenos días";
-let dos = " ¿qué desea tomar?";
-console.log (uno + dos);
+// Ejercicio 5
 
-// tipo de datos primitivos
+let firstv = "España"
 
-// son los que no poseen métodos ni propiedades (todavía no se que significa eso). Son inmutables. los tipos son
+let secv = "Europa"
 
-let variablesPrimitivas = {
-    String : "Hola!",
-    Number : "42",
-    Boolean : "true",
-    Object : "null",
-    Undefined : "undefined",
-    Symbol : "symbol",
-    Bigint : "n",
-}
+console.log (`Vivimos en ${firstv}, que forma parte de ${secv}`);
 
-console.log (`El primitivo String, por ejemplo ${variablesPrimitivas.String},
-El primitivo Number, como ${variablesPrimitivas.Number},
-El primitivo Boolean, como ${variablesPrimitivas.Boolean},
-El primitivo Object, como ${variablesPrimitivas.Object},
-El primitivo Undefined, como ${variablesPrimitivas.Undefined},
-El primtivo Symbol, como ${variablesPrimitivas.Symbol},
-y por ultimo el primitivo Bigint, como por ejemplo ${variablesPrimitivas.Bigint}`)
+// Ejercicio 6
 
-console.log (variablesPrimitivas);
+// BOOLEAN
 
-// practica de la introdución de varios objetos en la variable
+let primerNum = 1;
 
-let datos = {
-    nombre : "Emilio",
-    apellidos : "Vargas Millán",
-    edad : "26"
-}
+let secondNum = 2;
 
-console.log (`Hola ${datos.nombre} ${datos.apellidos}, tienes ${datos.edad} años, por lo que puedes acceder al curso`);
+let suma = primerNum + secondNum;
 
-// Prueba variable num = 5 y sumarle 5
+console.log ( suma == 2 ) // esta operación dará como resultado un false.
 
-let n = 5;
+console.log (suma  == 3) // esta operación dará ocmo resultado un true
 
-console.log ( n+ 5 );
+// NUMBER
 
-// funciona perfecto, vamos a complicarlo un poco más
+let firstnumber = 1;
 
-let x = 45;
-let y = 30;
+console.log (firstnumber)
 
-console.log ( x * 2 + y )
+// STRING
 
-// wooooow, y funciona!
+const firsttring = "Primer Stirng"
 
-// Ejercicio 8, declarar 2 variables e imprimir solo 1 con las dos.
+console.log (firsttring);
 
-const variableuno = "soy la primera variable, y me sumo a ..."
-const variabledos = "la segunda variable!"
+// NULL
 
-console.log ( variableuno + variabledos)
+let pruebaNull = null;
 
-// Comparación de datos en javascript
+console.log (pruebaNull);
 
-let a = "5";
-let b = "10";
+// UNDEFINED
 
-a = b ? console.log("iguales"): console.log("diferentes");
+let underwater;
 
-// En este ejemplo aparece Equal, voy a probar otra.
+console.log (underwater);
 
-a==b ? console.log("iguales"): console.log("diferentes");
+// SYMBOL
 
-// Aquí aparece diferentes, voy a probar la última.
+let logo = Symbol ("2");
+let otrologo = Symbol ("5");
 
-a===b ? console.log("iguales"): console.log("diferentes");
+console.log (typeof logo)
 
-// también aparece diferentes.
+// Ejercicio 7
 
-// Creo que lo anterior es un if-else, pero abreviado con el ? y los :
+const num = 5;
 
-/* Ejercicio 9, Inicializar una variable num de valor 5 y transforma num en cadena. Imprime en console.log los dos tipos de datos.
+console.log (num + 5);
 
-.toString()
-String()
+// Ejercicio 8
 
+let nombre = "Jose Antonio";
+let apellido = "Montoya";
+
+const datos = (nombre + " " + apellido);
+
+console.log (`Tu nombre y apellido son ${datos}`);
+
+// Ejercicio 9
+
+let numer = 5;
+
+numer = "5"; // Aquí transformo el número en cadena
+
+console.log (typeof numer); // Aquí muestro en Cadena
+console.log (typeof Number(numer)); // Aquí lo muestro en numero
+
+// Ejercicio 10
+
+let decimales = 3.123456;
+
+console.log (decimales.toFixed(3))
+
+// Ejercicio 11
+
+let primeracadena = "Primera cadena"
+let segundacadena = "Segunda cadena"
+
+let sumacadenas = (primeracadena + " y " + segundacadena)
+
+console.log (sumacadenas.length);
+
+// Ejercicio 12
+
+console.log (`La suma de las cadenas es ${sumacadenas}`)
+
+/* // todo esto lo he hecho de más, me da penita borrarlo
+
+const tunombre = "Antonio"
+const tuedad = 10;
+
+console.log (`Muy buenas ${tunombre}, ahora mismo tienes ${tuedad}, pero (en teoría) dentro de 10 años tendrás ${tuedad + 10}`)
 */
 
-let number = 18.30;
+// Ejercicio 13
 
-number.toString ([4])
+let primeracoercion = 10 + "1";
 
-console.log(number.toString)
+console.log (primeracoercion); // La suma nos ofrece el resulta de "101", porque convierte todo en String, y simplemente los une
 
-let pruebas = {
-    nombres : "propios",
-    edades : 15,
-}
+let segundacoercion = 10 - "1";
 
-console.log (`tu calle en ${pruebas.nombres} es ${pruebas.edades+3}`)
+console.log (segundacoercion); // La resta, por el contrario, nos realiza la operación matemática conviertiendo todo en Number (como nos dijo Nico), por lo que nos arroja el resultado de 9.
 
-let enpantalla = "prueba en pantalla"
+// Ejercicio 14
 
-document.write(enpantalla)
+let var1 = "contigo"
 
+var1 = "yo";
+// simplemente cambiando esta preciosa variable podemos cambiar el contenido del texto, sin cambiar de cadena ni imprimir una nueva cadena.
 
-let parametros = {
-    tamaño : "x o L",
-    peso : 20,
-}
-
-document.write (`los datos son ${parametros.tamaño} y ${parametros.peso}`)
-
-let pagina = "TU MUNDO";
-
-document.write (pagina);
+console.log (`Hey Tú, cómo te llamas. ¡Hey, estoy hablando ${var1}!`)
