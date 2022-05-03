@@ -210,7 +210,8 @@ const trabajo = false;
 
 if (trabajo) {
     console.log ("no puedes ir porque trabajas, cara pan")
-} else if (!trabajo && buen_tiempo) {
+} else if (!trabajo && buen_tiempo)
+/* o quizás poner (trabajo == false) */ {
     console.log ("Puedes ir a la plallita, ya que no trabajas y hace un tiempo maravilloso")
 }
 else {
