@@ -245,7 +245,7 @@ console.log (`La suma de los números anteriores a ${solicitud} da como resultad
 
 // 23 Crear un programa que calcule el factorial de un número n, donde el valor de n se recibe desde el “prompt” y además se verifique si el valor es de tipo number. Si no lo es, se sale del programa con un mensaje de error.
 
-/* let factorial = parseInt(prompt("introduce el número y te diré el factorial"));
+/* let factorial = Number(prompt("introduce el número y te diré el factorial"));
 let valFactorial = 1;
 
 if (typeof factorial == "number" && !Number.isNaN(factorial)) {
@@ -260,5 +260,3 @@ if (typeof factorial == "number" && !Number.isNaN(factorial)) {
 // 24 Escribir una función que, dados un mínimo y un máximos, cree un número aleatorio entre un número y un máximo.
 
 /* console.log ((Math.random() * (0.6 - 0.2) + 0.2).toFixed(3)) */ // el .Tofixed para quitar un poquito de decimal
-
-
