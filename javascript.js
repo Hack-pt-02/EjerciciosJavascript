@@ -259,4 +259,100 @@ if (typeof factorial == "number" && !Number.isNaN(factorial)) {
 
 // 24 Escribir una función que, dados un mínimo y un máximos, cree un número aleatorio entre un número y un máximo.
 
-/* console.log ((Math.random() * (0.6 - 0.2) + 0.2).toFixed(3)) */ // el .Tofixed para quitar un poquito de decimal
+/* function aleatory (max,min) {
+    // otra manera --> return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor((Math.random() * (max - min) + min));
+}
+
+console.log (aleatory(10,5)); */
+
+//console.log ((Math.random() * (5 - 0) + 0).toFixed(0)) // el .Tofixed para quitar un poquito de decimal
+
+// 25 Crear una función, tipCalculator(), que tenga dos parámetros: una cadena que represente la calidad del servicio recibido y un número que represente el coste total. Devuelve la propina, como un número, basado en lo siguiente:
+
+/* function tipCalculator (quality, cost) {
+    if (quality == "fatal") {
+        return `el servicio ha sido ${quality} y la propina es de ${cost * 0.05}€`;
+    } else if (quality == "ok") {
+        return `el servicio ha sido ${quality} y la propina es de ${cost * 0.15}€`;
+    } else if (quality == "bueno") {
+        return `el servicio ha sido ${quality} y la propina es de ${cost * 0.2}€`;
+    } else if (quality == "excelente") {
+        return `el servicio ha sido ${quality} y la propina es de ${cost * 0.3}€`;
+    } else {
+        return `el servicio ha sido ${quality} y la propina es de ${cost * 0.18}€`;
+    }
+}
+console.log (tipCalculator("bueno",10)) */
+
+// 27 Escribir una función que nos diga si un número es par o impar.
+
+/* function paring(n) {
+    return n % 2 == 0 ? `par` : `impar`
+}
+console.log(paring(18)) */
+
+// 28 Escribir una función que imprima un intervalo de números entre 0 y 10, excluyendo los pares.
+
+/* function intervalImpar() {
+    
+    let variable = 0;
+
+    for (variable = 0; variable <= 10; variable++) {
+
+        if ((variable % 2) !== 0) {
+            console.log (variable)
+        }
+
+    }
+    return variable;
+}
+
+console.log (intervalImpar()) */
+
+// 29 Te dan el length y el width de un polígono de 4 lados. El polígono puede ser un rectángulo o un cuadrado. Si es un cuadrado, devuelve su área. Si es un rectángulo, devuelve su perímetro.
+
+/* function poligons (width,length) { */
+
+    // este es en ternario
+
+    /* return width === length ? `el area de este cuadrado es ${width * length}` : `el area de este rectángulo es ${(width*2) + (length*2)}` */
+
+    // esto es normalillo
+
+    /* if (width === length) {
+        return `El area de este cuadrado es ${width * length}`;
+    }
+    else {
+        return `El area de este rectángulo es ${(width*2)+(length*2)}`
+    } */
+/* }
+console.log (poligons(10,10)); */
+
+// 30 Escribir una función que calcule el área del radio del 1 al 10.
+
+/* function radio() {
+    
+    for (r = 0; r <= 10; r++) {
+
+    console.log(Math.PI * Math.pow(r,2));
+}
+
+}
+
+radio()
+ */
+
+// 31 Encuentra la forma más rápido de convertir la primera letra de una cadena en mayúscula a través de una función.
+
+function capital (name) {
+    let first = (name.charAt(0).toUpperCase());
+    let second = (name.slice(1))
+    
+    let unionCapital = (first + second)
+
+    return unionCapital
+
+}
+
+console.log(capital("Maria José"));
