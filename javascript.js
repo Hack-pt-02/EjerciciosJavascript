@@ -406,10 +406,45 @@ console.log (num) */
 
 // 36 Devuelve las dos edades más altas dado una matriz de números que representen edades.
 
-function dosEdadesMasAltas() {
-    for (i = 0; i <= dosEdadesMasAltas; i++) {
-        console.log (Math.max(dosEdadesMasAltas))
-    }
+/* function dosEdadesMasAltas(number) {
+    let orden = (a,b) => b-a;
+    number.sort(orden);
+    return number.slice(0,2)
 }
-console.log (dosEdadesMasAltas)
-dosEdadesMasAltas([1, 2, 10, 8, 22, 3, 6, 12, 80, 4, 55, 19]);
+console.log (dosEdadesMasAltas([1, 2, 10, 8, 22, 3, 6, 12, 80, 4, 55, 19])) */
+
+// este lo dejo porque ya lo hice y me da pena borrarlo 
+
+/* let edades = [1, 2, 10, 8, 22, 3, 6, 12, 80, 4, 55, 19]
+
+        let orden = (a,b) => b-a;
+
+        console.log (edades.sort(orden))
+        
+        let num1 = edades.sort(orden)[0]
+        let num2 = edades.sort(orden)[1]
+
+        console.log (num1 , num2) */
+
+// 37 A partir de un array, devuelve otro array con la elevación a potencia de 3 de cada elemento del array inicial.
+
+/* let Array = [5,15,20,40]
+
+let Array2 = []
+
+for (i = 0; i < Array.length; i++) {
+
+    Array2[i] = Math.pow(Array[i],3)
+}
+console.log (Array2) */
+
+// 38 A partir de un array, devuelve otro array con las primeras 3 letras por cada elemento del array inicial.
+
+/* const dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
+
+let firstDay = []
+    for (i = 0; i < dias.length; i++) {
+        firstDay[i] = dias[i].slice(0,3)
+    }
+
+console.log (firstDay) */
