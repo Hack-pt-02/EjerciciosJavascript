@@ -314,18 +314,18 @@ console.log (intervalImpar()) */
 
 /* function poligons (width,length) { */
 
-    // este es en ternario
+// este es en ternario
 
-    /* return width === length ? `el area de este cuadrado es ${width * length}` : `el area de este rectángulo es ${(width*2) + (length*2)}` */
+/* return width === length ? `el area de este cuadrado es ${width * length}` : `el area de este rectángulo es ${(width*2) + (length*2)}` */
 
-    // esto es normalillo
+// esto es normalillo
 
-    /* if (width === length) {
-        return `El area de este cuadrado es ${width * length}`;
-    }
-    else {
-        return `El area de este rectángulo es ${(width*2)+(length*2)}`
-    } */
+/* if (width === length) {
+    return `El area de este cuadrado es ${width * length}`;
+}
+else {
+    return `El area de este rectángulo es ${(width*2)+(length*2)}`
+} */
 /* }
 console.log (poligons(10,10)); */
 
@@ -335,17 +335,20 @@ console.log (poligons(10,10)); */
     
     for (r = 0; r <= 10; r++) {
 
-    console.log(Math.PI * Math.pow(r,2));
+    let area = Math.PI * Math.pow(r,2);
+
+    console.log (area)
 }
 
 }
 
-radio()
- */
+radio() */
+
+
 
 // 31 Encuentra la forma más rápido de convertir la primera letra de una cadena en mayúscula a través de una función.
 
-function capital (name) {
+/* function capital (name) {
     let first = (name.charAt(0).toUpperCase());
     let second = (name.slice(1))
     
@@ -355,4 +358,58 @@ function capital (name) {
 
 }
 
-console.log(capital("Maria José"));
+console.log(capital("Maria José")); */
+
+//32 Calcular la serie de fibonacci que devuelve hasta n números bajo forma de array.
+
+/* let fibonaccii = [];
+fibonaccii [0] = 0;
+fibonaccii [1] = 1;
+
+for (i = 2; i < 50; i++) {
+    fibonaccii[i] =fibonaccii[i - 2] + fibonaccii [i - 1]
+}
+console.log (fibonaccii) */
+
+// 33 A partir de este array de números, devolver un array con solo números pares:
+
+/* const numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];*/
+// desarrollada
+
+/* let pares = numeros.filter(function(num) {
+    return num % 2 == 0;
+}); */
+
+// función flecha
+
+/* let pares = numeros.filter ((num) => num % 2 == 0) */
+
+/* console.log (pares) */
+
+// 34 A partir de estos días filtrar por días que empiezan por "m":
+
+/* const dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado" , "domingo"]
+
+for (i = 0; i <= dias.length; i++) {
+    if (dias[i].charAt(0) == "m") {
+        console.log (dias[i])
+    }
+} */
+
+// 35 A partir de este array de números, ordena la secuencia en forma creciente y luego filtra números menor de 10.
+
+/* let num = [100,2,20,35,4,44];
+
+num.sort ((a,b) => a - b)
+
+console.log (num) */
+
+// 36 Devuelve las dos edades más altas dado una matriz de números que representen edades.
+
+function dosEdadesMasAltas() {
+    for (i = 0; i <= dosEdadesMasAltas; i++) {
+        console.log (Math.max(dosEdadesMasAltas))
+    }
+}
+console.log (dosEdadesMasAltas)
+dosEdadesMasAltas([1, 2, 10, 8, 22, 3, 6, 12, 80, 4, 55, 19]);
