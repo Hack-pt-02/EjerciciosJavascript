@@ -390,6 +390,14 @@ console.log (fibonaccii) */
 
 /* const dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado" , "domingo"]
 
+
+let diasfiltrados = dias.filter (eldia => eldia.charAt(0) == "m")
+
+console.log (diasfiltrados) */
+
+
+// esta es otra manera
+/*
 for (i = 0; i <= dias.length; i++) {
     if (dias[i].charAt(0) == "m") {
         console.log (dias[i])
