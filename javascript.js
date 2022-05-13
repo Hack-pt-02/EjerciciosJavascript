@@ -436,10 +436,19 @@ console.log (dosEdadesMasAltas([1, 2, 10, 8, 22, 3, 6, 12, 80, 4, 55, 19])) */
 
 // 37 A partir de un array, devuelve otro array con la elevación a potencia de 3 de cada elemento del array inicial.
 
-/* let Array = [5,15,20,40]
+/* let Array = [5, 15, 20, 40]
 
-let Array2 = []
+let Array2 = [] */
 
+// Manera más óptima 
+
+/* let Array3 = Array.map(e => Math.pow(e, 3))
+
+console.log(Array3) */
+
+// Método largo
+
+/* 
 for (i = 0; i < Array.length; i++) {
 
     Array2[i] = Math.pow(Array[i],3)
@@ -448,8 +457,15 @@ console.log (Array2) */
 
 // 38 A partir de un array, devuelve otro array con las primeras 3 letras por cada elemento del array inicial.
 
-/* const dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
+const dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
 
+let inicial = dias.map ((e) => {
+    dias[e].sort(0,3)
+})
+
+console.log (inicial)
+
+/*
 let firstDay = []
     for (i = 0; i < dias.length; i++) {
         firstDay[i] = dias[i].slice(0,3)
