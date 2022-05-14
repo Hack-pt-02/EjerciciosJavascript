@@ -406,11 +406,17 @@ for (i = 0; i <= dias.length; i++) {
 
 // 35 A partir de este array de números, ordena la secuencia en forma creciente y luego filtra números menor de 10.
 
-/* let num = [100,2,20,35,4,44];
+// let num = [5,10,15,8,20,3,2,40,9];
 
-num.sort ((a,b) => a - b)
+// ordenamiento
 
-console.log (num) */
+// num.sort ((a,b) => a - b)
+
+// filtro menor de 10
+
+/* let filtro = num.filter( e => e < 10)
+
+console.log (filtro) */
 
 // 36 Devuelve las dos edades más altas dado una matriz de números que representen edades.
 
@@ -457,13 +463,13 @@ console.log (Array2) */
 
 // 38 A partir de un array, devuelve otro array con las primeras 3 letras por cada elemento del array inicial.
 
-const dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
+/* const dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
 
-let inicial = dias.map ((e) => {
-    dias[e].sort(0,3)
-})
+let inicial = dias.map (x => x.substring(0,3))
 
-console.log (inicial)
+console.log (inicial) */
+
+// método largo
 
 /*
 let firstDay = []
