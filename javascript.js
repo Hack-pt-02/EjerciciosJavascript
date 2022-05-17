@@ -442,7 +442,7 @@ console.log (dosEdadesMasAltas([1, 2, 10, 8, 22, 3, 6, 12, 80, 4, 55, 19])) */
 
 // 37 A partir de un array, devuelve otro array con la elevación a potencia de 3 de cada elemento del array inicial.
 
-/* let Array = [5, 15, 20, 40]
+/* let Array = [2,4,25]
 
 let Array2 = [] */
 
@@ -478,3 +478,66 @@ let firstDay = []
     }
 
 console.log (firstDay) */
+
+// 39 A partir de un array de números, devolver la suma de los números presentes en el array inicial.
+
+/* let array = [10,52,21,356,45,87,12,31,2,14]
+
+let sum = array.reduce ((a,b) => a + b)
+
+console.log (sum) */
+
+// 40 Calcular la media de la puntuación de un partido de bowling.
+
+// eliminar numeros negativos
+// media solo de los positivos
+
+/* let medias = 0;
+
+    function reducir(datos) {
+        let filtrado = datos.filter ( e => e > 0)
+        let operacionSuma = filtrado.reduce ((a,b) => a + b)
+        return medias = operacionSuma / filtrado.length
+    }
+
+console.log (reducir ([-10, -23, -1, -52, -4, -32, 2, 12, 42, 23,40,19])) */
+
+// 41 Generando un array de números aleatorios dado un mínimo y un máximo,
+
+// filtramos sólo los números pares,
+// duplicamos los números obtenidos y sumamos 10,
+// filtramos estos números para valores mayores de 10 y menos de 100,
+// y hacemos la suma final.
+
+/* let array = []
+let max = 10
+
+function aleatory() {
+    return Math.floor(Math.random() * (100 - 0) + 0)
+}
+
+for (i = 0; i < max; i++) {
+    array[i] = aleatory()
+}
+
+function operacion() {
+        let filtred = array.filter(e => e % 2 == 0);
+        let sum = filtred.map(i => ((i * 2) + 10));
+        let filtrado = sum.filter (n => n > 10 && n < 100)
+        let suma = filtrado.reduce ((a,b) => a + b)
+        return suma
+    }
+
+console.log(operacion()); */
+
+// 42 A partir de 2 arrays, compararlos y devolver un array sin duplicados a través de una función.
+
+/* let a = [1,2,3,4,5,6,7]
+let b = [1,2,3,3,2,4]
+
+let union = a.concat(b)
+
+const eliminados = union.filter ((a,b) => union.indexOf(a) === b);
+
+console.log (eliminados) */
+
