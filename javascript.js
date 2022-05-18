@@ -533,11 +533,11 @@ console.log(operacion()); */
 // 42 A partir de 2 arrays, compararlos y devolver un array sin duplicados a través de una función.
 
 /* let a = [1,2,3,4,5,6,7]
-let b = [1,2,3,3,2,4]
+let b = [1,2]
 
-let union = a.concat(b)
+function comp(one,two) {
+    return one.filter(i => !two.includes(i))
+}
 
-const eliminados = union.filter ((a,b) => union.indexOf(a) === b);
-
-console.log (eliminados) */
+console.log (comp(a,b)) */
 
