@@ -512,12 +512,12 @@ console.log (reducir ([-10, -23, -1, -52, -4, -32, 2, 12, 42, 23,40,19])) */
 /* let array = []
 let max = 10
 
-function aleatory() {
-    return Math.floor(Math.random() * (100 - 0) + 0)
+function aleatory(max,min) {
+    return Math.floor(Math.random() * (max - min) + min)
 }
 
 for (i = 0; i < max; i++) {
-    array[i] = aleatory()
+    array[i] = aleatory(100,0)
 }
 
 function operacion() {
@@ -541,3 +541,64 @@ function comp(one,two) {
 
 console.log (comp(a,b)) */
 
+// 43 A partir de un array, escribir una función que encuentre el único elemento distinto.
+
+/* a = [5,5,5,5,5,4]
+
+let filtrado = a.filter (e => e != a[e - 1])
+
+console.log (filtrado) */
+
+// 44 Crear objeto de computadora, máquina relacionada con objeto de computadora y método de arranque.
+
+/* let computadora = new Object();
+
+computadora.open = function () {
+    console.log ("Encendido")
+}
+computadora.close = function () {
+    console.log ("Apagado")
+}
+
+computadora.open() */
+
+// 45 Crear un objeto de fruta, genera el tipo, color y peso de la fruta.
+
+/* let frutilla = new Object();
+
+frutilla.tipo = "golden";
+frutilla.color = "red";
+frutilla.peso = "100gr";
+
+console.log (frutilla) */
+
+// 46 A partir de un array de objetos, escribir una función que devuelva el nombre del mejor jugador, su media en puntuación y comprobar si está inscrito en la próxima temporada.
+
+let data = [{
+        name: "Gracia",
+        score: [21, 3, 5, 78, 25],
+        temporada: true
+    },
+    {
+        name: "Nico M",
+        score: [55, 66, 77, 55, 66],
+        temporada: false
+    },
+    {
+        name: "Nico G",
+        score: [12, 34, 67, 89, 34],
+        temporada: true
+    },
+    {
+        name: "Gemma",
+        score: [12, 90, 13, 45, 6],
+        temporada: true
+    }
+]
+
+let media = data.map (e => `${e.name},${e.score.reduce ((a,b) => (a + b)) /e.score.length}`);
+
+
+    for (i = 0; i <= media.length; i++) {
+        media[i].split(",");
+    }
