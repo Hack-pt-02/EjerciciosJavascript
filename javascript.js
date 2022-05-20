@@ -574,6 +574,10 @@ console.log (frutilla) */
 
 // 46 A partir de un array de objetos, escribir una función que devuelva el nombre del mejor jugador, su media en puntuación y comprobar si está inscrito en la próxima temporada.
 
+// Primero: calcular la media para saber quien tiene más puntos
+// Segundo: Crear un array con el nombre y la puntuación para poder después hacer la función de alto nivel sort y ordenar por puntuación.
+// Tercero: Mostrar en consola el primero con los datos de nombre, putuación y temporada
+
 let data = [{
         name: "Gracia",
         score: [21, 3, 5, 78, 25],
@@ -596,9 +600,14 @@ let data = [{
     }
 ]
 
-let media = data.map (e => `${e.name},${e.score.reduce ((a,b) => (a + b)) /e.score.length}`);
+let media = data.map( e => {
+    return {nombre: e.name,
+            score: e.score.reduce ((a,b) => (a + b)) /e.score.length,
+            temporada: e.temporada
+        }
+})
 
+let orden = media.sort(((a, b) => b.score - a.score));
 
-    for (i = 0; i <= media.length; i++) {
-        media[i].split(",");
-    }
+console.log(orden[0]);
+
