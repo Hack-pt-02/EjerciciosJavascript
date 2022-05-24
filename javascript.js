@@ -578,7 +578,7 @@ console.log (frutilla) */
 // Segundo: Crear un array con el nombre y la puntuación para poder después hacer la función de alto nivel sort y ordenar por puntuación.
 // Tercero: Mostrar en consola el primero con los datos de nombre, putuación y temporada
 
-let data = [{
+/* let data = [{
         name: "Gracia",
         score: [21, 3, 5, 78, 25],
         temporada: true
@@ -598,16 +598,145 @@ let data = [{
         score: [12, 90, 13, 45, 6],
         temporada: true
     }
-]
-
-let media = data.map( e => {
+] */
+// Primero usamos la función de alto nivel map para crear un nuevo array de objetos en el cual ya esté calculada la media de puntuación
+/* let media = data.map( e => {
     return {nombre: e.name,
             score: e.score.reduce ((a,b) => (a + b)) /e.score.length,
             temporada: e.temporada
         }
-})
+}) */
+// Después ordenamos los objetos por la puntuación más alta
+/* let orden = media.sort(((a, b) => b.score - a.score)) */
+;
+// Por último mostramos el primer objeto, que debe ser el que tenga la puntuación más alta. Éste nos mostrará el nombre de la puntuación y si va a jugar la próxima temporada
 
-let orden = media.sort(((a, b) => b.score - a.score));
+/* console.log(orden[0]) */
+;
 
-console.log(orden[0]);
+// 47 Ordena esta estructura completa por profesor, comunication y estudiantes a la vez que ordenandolo por edad, y devuelve un objeto.
 
+// Agrupar los objetos por comunication
+// unir los resultados por el orden deseado
+
+/* const data = {
+    Antonio: {
+        classification: "comunication",
+        age: 40
+    },
+    Nicola: {
+        classification: "profesor",
+        age: 34
+    },
+    Gracia: {
+        classification: "profesor",
+        age: 37
+    },
+    Oscar: {
+        classification: "studient",
+        age: 35
+    },
+    Nico: {
+        classification: "profesor",
+        age: 29
+    },
+    Lufi: {
+        classification: "studient",
+        age: 26
+    },
+    Maria: {
+        classification: "comunication",
+        age: 28
+    },
+    Pablo: {
+        classification: "studient",
+        age: 36
+    }
+} */
+
+// largo del objeto de objetos
+
+/* let ordenados = []
+let profOrdenado = [] */
+
+//console.log(entradas[2][1].age)
+
+/* function ordenamiento() {
+    let entradas = Object.entries(data);
+    
+    for (i = 0; i <= Object.keys(data).length; i++) {
+        if (entradas[i][1].classification == "profesor") {
+            ordenados.push(entradas[i])
+        } else {
+            "pues nada"
+        }
+    }
+}
+console.log (ordenados)
+ordenamiento()
+
+console.log (ordenados[0]) */
+
+/* function profesores() {
+    for (i = 0; i <= objectSize(); i++) {
+        if (entradas[i][1].classification == "profesor") {
+            return entradas[i].reduce(e => {
+                (entradas[e][1].age.sort((a, b) => b - a))
+            })
+        } else {
+            ("Pues nada")
+        }
+    }
+}
+
+function estudiantes() {
+    for (i = 0; i <= objectSize(); i++) {
+        if (entradas[i][1].classification == "studient") {
+            (entradas[i])
+        }
+    }
+}
+
+function comunicadores() {
+    for (i = 0; i <= objectSize(); i++) {
+        if (entradas[i][1].classification == "comunication") {
+            (entradas[i])
+        }
+    }
+}
+
+console.log(profesores())
+
+function filtrado() {
+    for (i = 0; i <= objectSize(); i++) {
+        (data.Nicola)
+    }
+} */
+
+// EJERCICIOS DEL DOM --------------------------
+
+// 1 Hacer un layout simple en el que haya 3 cards y cambiar a través de la manipulación del DOM el color del título de las mismas.
+
+/* let titleCard = document.querySelectorAll(".titleCard")
+
+for (i = 0; i <= titleCard.length; i++) {
+    titleCard[i].style.color = "red";
+} */
+
+
+// 2 Realizar un evento que al click de un botón que hayamos creado, nos aparezca en consola un "Hola"
+
+/* let btn = document.querySelector("#btn");
+
+btn.addEventListener("click", function() {
+    console.log ("Hola")
+}) */
+
+// 3
+let estrellaOne = document.querySelectorAll(".bi")
+
+for (let i = 0; i < estrellaOne.length; i++) {
+    estrellaOne[i].addEventListener("click", () => {
+        estrellaOne[i].style.color = "red"
+    })
+}
