@@ -616,8 +616,7 @@ console.log (frutilla) */
 
 // 47 Ordena esta estructura completa por profesor, comunication y estudiantes a la vez que ordenandolo por edad, y devuelve un objeto.
 
-// Agrupar los objetos por comunication
-// unir los resultados por el orden deseado
+// 
 
 /* const data = {
     Antonio: {
@@ -633,7 +632,7 @@ console.log (frutilla) */
         age: 37
     },
     Oscar: {
-        classification: "studient",
+        classification: "student",
         age: 35
     },
     Nico: {
@@ -641,7 +640,7 @@ console.log (frutilla) */
         age: 29
     },
     Lufi: {
-        classification: "studient",
+        classification: "student",
         age: 26
     },
     Maria: {
@@ -649,70 +648,66 @@ console.log (frutilla) */
         age: 28
     },
     Pablo: {
-        classification: "studient",
+        classification: "student",
         age: 36
     }
-} */
+}
 
-// largo del objeto de objetos
+let sorting = Object.entries(data).sort((a, b) => {
+    if (a[1].classification == "profesor" && b[1].classification != "profesor") return -1
+    if (a[1].classification == "comunication" && b[1].classification == "student") return -1
+    if (a[1].classification == b[1].classification) {
+        return b[1].age - a[1].age
+    }
+})
 
-/* let ordenados = []
-let profOrdenado = [] */
+console.log(sorting) */
 
-//console.log(entradas[2][1].age)
+// 48 Escribir una función que acepte como parámetro un objeto de estudiantes y votaciones. { Nico: 5, Gemma: 7... }. Calcular la media de las votaciones, incrementarla el 10% y redondearla por defecto. Devolver un objeto con llave el nombre del estudiante, y valor "Promovido con NN" o "Suspendido con NN", donde NN es el voto de cada estudiante en el objeto inicial en base al que sea mayor o menor de la media calculada.
 
-/* function ordenamiento() {
-    let entradas = Object.entries(data);
-    
-    for (i = 0; i <= Object.keys(data).length; i++) {
-        if (entradas[i][1].classification == "profesor") {
-            ordenados.push(entradas[i])
+//PSEUDOCODE
+
+// Crear una funcion con los parámetros estudiantes y votaciones
+// calcular media de las votaciones
+// incrementar en 10% la media de las votaciones
+// redondear la media de votaciones
+
+// devolver OBJETO con llave => nombreEstudiante y valor => "promovido con NN" o "suspendido con NN"
+// La NN es confusa, luego la miramos.
+
+let estudiantes = {
+    Nico: 10,
+    Gemma: 7,
+    Nicola: 8,
+    Gracia: 7,
+    Javier: 9,
+    Julen: 10
+}
+
+/* let medias = array.reduce((a,b) => {
+    let calc = array[a][1] + array[b][1]
+    return calc
+}) */
+
+/* function medias(obj) {
+    let name = Object.keys(obj);
+    let vote = Object.values(obj);
+    // calcular media de los estudiantes
+    let med = Math.floor((vote.reduce((a, b) => a + b )/ vote.length) * 1.1);
+    // devolver OBJETO con llave => nombreEstudiante y valor => "promovido con NN" o "suspendido con NN"
+    let resultado = {}
+
+    for(i=0; i < vote.length; i++) {
+        if (vote[i] >= med) {
+            resultado[name[i]] = `promovido con ${vote[i]}`;
         } else {
-            "pues nada"
+            resultado[name[i]] = `suspendido con ${vote[i]}`
         }
     }
-}
-console.log (ordenados)
-ordenamiento()
-
-console.log (ordenados[0]) */
-
-/* function profesores() {
-    for (i = 0; i <= objectSize(); i++) {
-        if (entradas[i][1].classification == "profesor") {
-            return entradas[i].reduce(e => {
-                (entradas[e][1].age.sort((a, b) => b - a))
-            })
-        } else {
-            ("Pues nada")
-        }
-    }
+    return resultado
 }
 
-function estudiantes() {
-    for (i = 0; i <= objectSize(); i++) {
-        if (entradas[i][1].classification == "studient") {
-            (entradas[i])
-        }
-    }
-}
-
-function comunicadores() {
-    for (i = 0; i <= objectSize(); i++) {
-        if (entradas[i][1].classification == "comunication") {
-            (entradas[i])
-        }
-    }
-}
-
-console.log(profesores())
-
-function filtrado() {
-    for (i = 0; i <= objectSize(); i++) {
-        (data.Nicola)
-    }
-} */
-
+console.log (medias(estudiantes)) */
 // EJERCICIOS DEL DOM --------------------------
 
 // 1 Hacer un layout simple en el que haya 3 cards y cambiar a través de la manipulación del DOM el color del título de las mismas.
@@ -732,11 +727,15 @@ btn.addEventListener("click", function() {
     console.log ("Hola")
 }) */
 
-// 3
-let estrellaOne = document.querySelectorAll(".bi")
+// 3 Realizar unas cards que contengan cinco estrellas clicables para hacer una review.
 
-for (let i = 0; i < estrellaOne.length; i++) {
-    estrellaOne[i].addEventListener("click", () => {
-        estrellaOne[i].style.color = "red"
+let stars = document.querySelectorAll(".estrella");
+
+stars.forEach((star,index) => {
+    star.addEventListener("click", () => {
+        for (i=0; i <= index; i++) {
+            let selectStar = stars[i];
+            selectStar.classList.add("relleno");
+        }
     })
-}
+})
