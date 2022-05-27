@@ -675,19 +675,14 @@ console.log(sorting) */
 // devolver OBJETO con llave => nombreEstudiante y valor => "promovido con NN" o "suspendido con NN"
 // La NN es confusa, luego la miramos.
 
-let estudiantes = {
+/* let estudiantes = {
     Nico: 10,
     Gemma: 7,
     Nicola: 8,
     Gracia: 7,
     Javier: 9,
     Julen: 10
-}
-
-/* let medias = array.reduce((a,b) => {
-    let calc = array[a][1] + array[b][1]
-    return calc
-}) */
+} */
 
 /* function medias(obj) {
     let name = Object.keys(obj);
@@ -728,14 +723,83 @@ btn.addEventListener("click", function() {
 }) */
 
 // 3 Realizar unas cards que contengan cinco estrellas clicables para hacer una review.
+/* let stars = document.querySelectorAll(".estrella");
 
-let stars = document.querySelectorAll(".estrella");
+let starArray = (Object.values(stars))
 
-stars.forEach((star,index) => {
-    star.addEventListener("click", () => {
-        for (i=0; i <= index; i++) {
-            let selectStar = stars[i];
-            selectStar.classList.add("relleno");
-        }
+console.log(starArray.forEach((valor, index) => {
+        let clicked = valor.addEventListener("click", () => {
+            valor.classList.add("relleno");
+            if
+            })
+        })
+) */
+
+
+/* function colorear(array) {
+    array.
+}
+
+colorear() */
+
+//5 Crea cuatro cards que representen un producto del mercado en el que se muestre:el nombre del producto, precio, nombre de la tienda, saber más. A través del DOM manipulation.
+
+let productos = [{
+        nombre: "Pera",
+        precio: 10,
+        tienda: "Mercadona"
+    },
+    {
+        nombre: "Leche",
+        precio: 3,
+        tienda: "Mercadona"
+    },
+    {
+        nombre: "Kiwi",
+        precio: 3.1,
+        tienda: "Consum"
+    },
+    {
+        nombre: "Zanahoria",
+        precio: 4.5,
+        tienda: "Lidl"
+    }
+]
+
+let cardsContainer = document.querySelector(".cardsContainer");
+
+console.log(productos[0].nombre)
+
+function cartas(array) {
+    for (i = 0; i <= array.length; i++) {
+        cardsContainer.innerHTML = `<div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">${array[i].nombre}</h5>
+        <p class="card-text">precio: ${array[i].precio}</p>
+        <p class="card-text">Tienda: ${array[i].tienda}</p>
+        <a href="#" class="btn btn-primary">Saber más</a>
+        </div>
+        </div>`
+    }
+}
+
+cartas(productos)
+
+
+
+
+
+// 6 Crea un input en el que todo lo que escribas, se refleje en otra parte mediante el uso del evento input de javascript.
+
+/* let input = document.querySelector(".introTexto");
+let button = document.querySelector(".sendText");
+let text = document.querySelector(".verTexto");
+
+function datos() {
+    button.addEventListener("click", (e) => {
+        e.preventDefault;
+        text.innerHTML = input.value
     })
-})
+}
+
+datos() */
