@@ -725,15 +725,43 @@ btn.addEventListener("click", function() {
 // 3 Realizar unas cards que contengan cinco estrellas clicables para hacer una review.
 /* let stars = document.querySelectorAll(".estrella");
 
-let starArray = (Object.values(stars))
+let star = (Object.values(stars))
 
-console.log(starArray.forEach((valor, index) => {
-        let clicked = valor.addEventListener("click", () => {
-            valor.classList.add("relleno");
-            if
-            })
+function color() {
+    star.forEach((el,index) => {
+        console.log(el)
+        el.addEventListener("click", () => {
+            if(index == 0) {
+                el.style.color = "red";
+                console.log(`la puntuación es de ${index + 1}`)
+            } else if(index == 1) {
+                star[0].style.color = "red";
+                star[1].style.color = "red";
+                console.log(`la puntuación es de ${index + 1}`)
+            } else if(index == 2) {
+                star[0].style.color = "red";
+                star[1].style.color = "red";
+                star[2].style.color = "red";
+                console.log(`la puntuación es de ${index + 1}`)
+            } else if(index == 3) {
+                star[0].style.color = "red";
+                star[1].style.color = "red";
+                star[2].style.color = "red";
+                star[3].style.color = "red";
+                console.log(`la puntuación es de ${index + 1}`)
+            } else if(index == 4) {
+                star[0].style.color = "red";
+                star[1].style.color = "red";
+                star[2].style.color = "red";
+                star[3].style.color = "red";
+                star[4].style.color = "red";
+                console.log(`la puntuación es de ${index + 1}`)
+            }
         })
-) */
+    })
+}
+
+color() */
 
 
 /* function colorear(array) {
@@ -744,7 +772,7 @@ colorear() */
 
 //5 Crea cuatro cards que representen un producto del mercado en el que se muestre:el nombre del producto, precio, nombre de la tienda, saber más. A través del DOM manipulation.
 
-let productos = [{
+/* let productos = [{
         nombre: "Pera",
         precio: 10,
         tienda: "Mercadona"
@@ -768,8 +796,6 @@ let productos = [{
 
 let cardsContainer = document.querySelector(".cardsContainer");
 
-console.log(productos[0].nombre)
-
 function cartas(array) {
     for (i = 0; i <= array.length; i++) {
         cardsContainer.innerHTML = `<div class="card" style="width: 18rem;">
@@ -783,10 +809,7 @@ function cartas(array) {
     }
 }
 
-cartas(productos)
-
-
-
+cartas(productos) */
 
 
 // 6 Crea un input en el que todo lo que escribas, se refleje en otra parte mediante el uso del evento input de javascript.
@@ -803,3 +826,11 @@ function datos() {
 }
 
 datos() */
+
+/* let daterio = {
+    name: "Jose",
+    edad: 34,
+    pizza: true
+}
+
+console.log(Array.from(daterio)) */
