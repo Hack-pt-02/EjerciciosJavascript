@@ -772,7 +772,7 @@ colorear() */
 
 //5 Crea cuatro cards que representen un producto del mercado en el que se muestre:el nombre del producto, precio, nombre de la tienda, saber más. A través del DOM manipulation.
 
-/* let productos = [{
+let productos = [{
         nombre: "Pera",
         precio: 10,
         tienda: "Mercadona"
@@ -794,22 +794,39 @@ colorear() */
     }
 ]
 
-let cardsContainer = document.querySelector(".cardsContainer");
 
 function cartas(array) {
-    for (i = 0; i <= array.length; i++) {
-        cardsContainer.innerHTML = `<div class="card" style="width: 18rem;">
-        <div class="card-body">
-        <h5 class="card-title">${array[i].nombre}</h5>
-        <p class="card-text">precio: ${array[i].precio}</p>
-        <p class="card-text">Tienda: ${array[i].tienda}</p>
-        <a href="#" class="btn btn-primary">Saber más</a>
+    let cardsContainer = document.querySelector(".content-product");
+    let contenedor = `<div class="container"><div class="row">`
+    let cierreContenedor = `</div></div>`
+    let product = array.map(el => {
+        return `
+        <div class="col-12 col-md-6 my-3 col-lg-3">
+        <div class="card border-0 shadow card-article">
+            <img src="https://picsum.photos/180/150" class="card-img-top" alt="https://picsum.photos/200">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">${el.nombre}</h5>
+                <p class="card-text">
+                    <a href="" class="text-decoration-none">${el.tienda}</a>
+                </p>
+                <p class="fw-bold">Precio: ${el.precio} €</p>
+                <a href="#" class="btn btn-subir">Detalle</a>
+            </div>
         </div>
-        </div>`
-    }
+    </div>
+        `
+    }).join(" ")
+
+    let divv = document.createElement('div')
+                    
+                    divv.innerHTML = `${contenedor + product + cierreContenedor}`
+
+                    cardsContainer.appendChild(divv)
+
 }
 
-cartas(productos) */
+cartas(productos)
+
 
 
 // 6 Crea un input en el que todo lo que escribas, se refleje en otra parte mediante el uso del evento input de javascript.
